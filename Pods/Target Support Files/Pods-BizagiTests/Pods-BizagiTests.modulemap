@@ -1,0 +1,6 @@
+framework module Pods_BizagiTests {
+  umbrella header "Pods-BizagiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
