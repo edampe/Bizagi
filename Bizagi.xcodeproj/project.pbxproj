@@ -10,21 +10,6 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>01C110634059F9416CAD645D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BizagiTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BizagiTests/Pods-BizagiTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>06877A83E7974769DC856445</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -231,6 +216,8 @@ fi
 			<array>
 				<string>5B23B1171F4D1BE6000E18B4</string>
 				<string>5B23B1131F4D1BE6000E18B4</string>
+				<string>5B731ED31F4E81A6003D697C</string>
+				<string>5B731ED11F4E6660003D697C</string>
 				<string>5B23B1151F4D1BE6000E18B4</string>
 			</array>
 			<key>isa</key>
@@ -332,6 +319,8 @@ fi
 				<string>5B23B11B1F4D1BE6000E18B4</string>
 				<string>5B23B11D1F4D1BE6000E18B4</string>
 				<string>5B23B1201F4D1BE6000E18B4</string>
+				<string>5B731ED01F4E6660003D697C</string>
+				<string>5B731ED21F4E81A6003D697C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -507,9 +496,7 @@ fi
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array>
-				<string>E3A3E771C964AA3C10D66A00</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -826,6 +813,8 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -886,13 +875,13 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>5B23B1321F4D1BE7000E18B4</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D87632B282F8C9D2FD5F337D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
@@ -919,8 +908,6 @@ fi
 		</dict>
 		<key>5B23B1331F4D1BE7000E18B4</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>01C110634059F9416CAD645D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
@@ -944,6 +931,46 @@ fi
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>5B731ED01F4E6660003D697C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ListVacationCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5B731ED11F4E6660003D697C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5B731ED01F4E6660003D697C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5B731ED21F4E81A6003D697C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DetalleSolicitud.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5B731ED31F4E81A6003D697C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5B731ED21F4E81A6003D697C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>726FC07326208749C2378A02</key>
 		<dict>
@@ -1030,8 +1057,6 @@ fi
 			<array>
 				<string>A5FBC4B6162D9BFE566BB46A</string>
 				<string>AF9DC7B21B4701570B0BA464</string>
-				<string>D87632B282F8C9D2FD5F337D</string>
-				<string>01C110634059F9416CAD645D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1078,28 +1103,6 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
-		</dict>
-		<key>D87632B282F8C9D2FD5F337D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BizagiTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BizagiTests/Pods-BizagiTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3A3E771C964AA3C10D66A00</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9140A4A4D228053C62F6BB9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>F6FF9CA3F767E83934E90F75</key>
 		<dict>
