@@ -10,15 +10,18 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 
+/**
+ * Protocolo para la ejecucion de funcion en el dismiss del controller.
+ */
 protocol isAbleToReceiveData {
-    func pass()  //data: string is an example parameter
+    func pass()
 }
 
 class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, isAbleToReceiveData {
     
-    
     @IBOutlet weak var _TableList: UITableView!
     
+    let _Util = Util()
     
     override func viewDidLoad()
     {
@@ -27,24 +30,31 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         _TableList.delegate = self
         _TableList.dataSource = self
         
-        buscarLisatdo()
-        
+        buscarListado()
     }
     
-    func buscarLisatdo(){
+    func buscarListado(){
         
-        progressBarDisplayer("Buscando", true)
+        // Mostramos un progress bar.
+        
+        _Util.progressBarDisplayer("Buscando", true, view)
+        
+        // Hacemos la peticion al nuestro WS.
         
         Alamofire.request(URL).responseArray { (response: DataResponse<[ListVacationsObject]>) in
+            
+            // Los datos ya se reciben mapeados, asi que podemos asignar la lista de inmediato.
             
             let listaVacaciones = response.result.value
             
             if let listaVacaciones = listaVacaciones {
                 
-                self.afterResponse()
+                // Ocultamos el Progress bar.
+                self._Util.afterResponse()
                 
                 LISTADO_VACACIONES = listaVacaciones
                 
+                // Refrescamos la TableView
                 self._TableList.reloadData()
                 
             }
@@ -70,16 +80,16 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        //user search
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListVacationCell", for: indexPath) as! ListVacationCell
-        
-        
         
         cell._NombreSolicitante.text = LISTADO_VACACIONES[indexPath.row].employee!
         cell._FechaDeA.text = "Desde " + LISTADO_VACACIONES[indexPath.row].beginDate! + " Hasta " + LISTADO_VACACIONES[indexPath.row].endDate!
         cell._CantidadDias.text = LISTADO_VACACIONES[indexPath.row].endDate!
-        cell._CantidadDias.text = calcularDias(position: indexPath.row) + " Días"
+        cell._CantidadDias.text = _Util.calcularDias(position: indexPath.row, beginDate: LISTADO_VACACIONES[indexPath.row].beginDate!,endDate: LISTADO_VACACIONES[indexPath.row].endDate!)  + " Días"
+
         
+        // Validamos el estado de la solicitud para decidir que imagen ponemos.
+
         if LISTADO_VACACIONES[indexPath.row].approved == "aprobado" {
             cell._ImgEstado.image = UIImage(named:"img-aprobado.png")!
         }else if LISTADO_VACACIONES[indexPath.row].approved == "rechazado"{
@@ -87,9 +97,7 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
             
         }else{
              cell._ImgEstado.image = UIImage(named:"img-pendiente.png")!
-            
         }
-        
         return cell
     }
     
@@ -100,18 +108,10 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
+
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetalleSolicitud") as! DetalleSolicitud
         present(vc, animated: true, completion: nil)
-        
 
-        
-    }
-    
-    func pass() {
-         self._TableList.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -119,6 +119,8 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         if segue.destination is DetalleSolicitud{
             
             let vc = (segue.destination as! DetalleSolicitud)
+            
+             // Se pasan los valores al siguiente controller.
             
             vc.lastVacationOn = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].lastVacationOn!
             vc.processId = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].processId!
@@ -131,60 +133,18 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
             vc.employee = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].employee!
             vc.approved = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].approved!
             vc.position = (_TableList.indexPathForSelectedRow?.row)!
-            vc.dias = calcularDias(position: (_TableList.indexPathForSelectedRow?.row)!) + " Días"
+            vc.dias = _Util.calcularDias(position: (_TableList.indexPathForSelectedRow?.row)!, beginDate: LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].beginDate!, endDate: LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].endDate!)
+
             vc.delegate = self 
         }
     }
     
-    
-    // MARK: Custom functions
-    
-    
-    func progressBarDisplayer(_ msg:String, _ indicator:Bool ) {
-        
-        _StrLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 200, height: 50))
-        _StrLabel.text = msg
-        _StrLabel.textColor = UIColor.white
-        _MessageFrame = UIView(frame: CGRect(x: view.frame.midX - 90, y: view.frame.midY - 25 , width: 180, height: 50))
-        _MessageFrame.layer.cornerRadius = 15
-        _MessageFrame.backgroundColor = UIColor(white: 0, alpha: 0.7)
-        if indicator {
-            _ActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
-            _ActivityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-            _ActivityIndicator.startAnimating()
-            _MessageFrame.addSubview(_ActivityIndicator)
-        }
-        _MessageFrame.addSubview(_StrLabel)
-        view.addSubview(_MessageFrame)
+    /**
+     * Se ejecuta cuando se hace dismiss en el detalle.
+     */
+    func pass() {
+        self._TableList.reloadData()
     }
-    
-    func afterResponse()
-    {
-        
-        _MessageFrame.removeFromSuperview()
-        
-    }
-    
-    func calcularDias(position: Int) -> String
-    {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        
-        let beginDate = dateFormatter.date(from: LISTADO_VACACIONES[position].beginDate!)
-        let endDate = dateFormatter.date(from: LISTADO_VACACIONES[position].endDate!)
-        
-        let calendar = NSCalendar.current
-        
-        let fecha_desde = calendar.startOfDay(for: beginDate!)
-        let fecha_hasta = calendar.startOfDay(for: endDate!)
-        
-        let dias = Set<Calendar.Component>([.day])
-        let result = calendar.dateComponents(dias, from: fecha_desde as   Date,  to: fecha_hasta as Date)
-      
-        return String(describing: result.day!)
-    }
-
     
 }
 

@@ -1,15 +1,16 @@
 //
-//  DetalleSolicitud.swift
+//  DetalleSolicitudFireBase.swift
 //  Bizagi
 //
-//  Created by Edilberto Amado Perdomo on 23/08/17.
+//  Created by Edilberto Amado P on 25/08/17.
 //  Copyright © 2017 Edilberto Amado Perdomo. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-
-class DetalleSolicitud: UIViewController {
+class DetalleSolicitudFireBase: UIViewController {
     
     @IBOutlet weak var _NombreEmpleado: UILabel!
     @IBOutlet weak var _FechaSolicitud: UILabel!
@@ -18,8 +19,9 @@ class DetalleSolicitud: UIViewController {
     @IBOutlet weak var _Hasta: UILabel!
     @IBOutlet weak var _CantidadDias: UILabel!
     @IBOutlet weak var _Estado: UILabel!
-
-    var delegate: isAbleToReceiveData?
+    
+    var ref: DatabaseReference!
+    var empleados: DatabaseReference!
     
     var position = 0
     var lastVacationOn: String = ""
@@ -37,7 +39,9 @@ class DetalleSolicitud: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Llenamos los datos de la vista.
+        ref = Database.database().reference()
+        
+        empleados = self.ref.child("empleados")
         
         _NombreEmpleado.text = employee
         
@@ -59,13 +63,14 @@ class DetalleSolicitud: UIViewController {
             _Estado.text = "Estado: Pendiente"
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
     @IBAction func cerrar(_ sender: Any) {
         
         self.dismiss(animated: true);
@@ -73,23 +78,38 @@ class DetalleSolicitud: UIViewController {
     
     @IBAction func btnAprobar(_ sender: Any) {
         
-        LISTADO_VACACIONES[position].approved! = "aprobado"
+        updateArtist(approved: "aprobado")
         self.dismiss(animated: true);
         
     }
     
     @IBAction func btnRechazar(_ sender: Any) {
         
-        LISTADO_VACACIONES[position].approved! = "rechazado"
-        self.dismiss(animated: true)
+        updateArtist(approved: "rechazado")
+        self.dismiss(animated: true);
         
     }
     
+
     /**
-     * Llamamos el Delegate.
+     * Actualizamos los datos en Firebase.
      */
-    override func viewDidDisappear(_ animated: Bool) {
-        delegate?.pass()
+    func updateArtist(approved:String){
+        
+        let update = [
+            "lastVacationOn" : lastVacationOn,
+            "processId" : processId,
+            "endDate" : endDate,
+            "process" : process,
+            "beginDate" : beginDate,
+            "activityId" : activityId,
+            "requestDate" : requestDate,
+            "activity" : activity,
+            "employee" : employee,
+            "approved": approved]
+        
+        empleados.child(String(position)).setValue(update)
+        
     }
-   
+    
 }

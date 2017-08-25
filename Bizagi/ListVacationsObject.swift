@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 class ListVacationsObject: Mappable{
+    
     var lastVacationOn: String?
     var processId: String?
     var endDate: String?
@@ -35,6 +36,33 @@ class ListVacationsObject: Mappable{
         employee <- map["employee"]
         approved <- map["approved"]
     }
+    
+    init( lastVacationOn: String?,
+          processId: String?,
+          endDate: String?,
+          process: String?,
+          beginDate: String?,
+          activityId: String?,
+          requestDate: String?,
+          activity: String?,
+          employee: String?,
+          approved: String?){
+        
+        self.lastVacationOn = lastVacationOn
+        self.processId = processId
+        self.endDate = endDate
+        self.process = process
+        self.beginDate = beginDate
+        self.activityId = activityId
+        self.requestDate = requestDate
+        self.activity = activity
+        self.employee = employee
+        self.approved = approved
+        
+    }
+    
 }
+
+
 
 

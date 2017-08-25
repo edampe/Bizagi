@@ -18,6 +18,8 @@
 		5B731ED31F4E81A6003D697C /* DetalleSolicitud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */; };
 		D41821A31F4F6A9C00C1035B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41821A21F4F6A9C00C1035B /* Constants.swift */; };
 		D41821A51F4F81AF00C1035B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */; };
+		D41821A71F506C0E00C1035B /* DetalleSolicitudFireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41821A61F506C0E00C1035B /* DetalleSolicitudFireBase.swift */; };
+		D41821A91F507C4100C1035B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41821A81F507C4100C1035B /* Util.swift */; };
 		D4CFB7421F4F614300A6160C /* ListVacationsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */; };
 		F6FF9CA3F767E83934E90F75 /* Pods_Bizagi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976FCD2D97B6507BBBD2516A /* Pods_Bizagi.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		AF9DC7B21B4701570B0BA464 /* Pods-Bizagi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizagi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi.release.xcconfig"; sourceTree = "<group>"; };
 		D41821A21F4F6A9C00C1035B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D41821A61F506C0E00C1035B /* DetalleSolicitudFireBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleSolicitudFireBase.swift; sourceTree = "<group>"; };
+		D41821A81F507C4100C1035B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVacationsObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,18 +101,16 @@
 		5B23B1111F4D1BE6000E18B4 /* Bizagi */ = {
 			isa = PBXGroup;
 			children = (
+				D41821AF1F5081AD00C1035B /* Constants */,
+				D41821AE1F50819D00C1035B /* Util */,
+				D41821AD1F50819100C1035B /* Items */,
+				D41821AA1F50814D00C1035B /* Controllers */,
 				5B23B1121F4D1BE6000E18B4 /* AppDelegate.swift */,
-				5B23B1141F4D1BE6000E18B4 /* FirstViewController.swift */,
-				5B23B1161F4D1BE6000E18B4 /* SecondViewController.swift */,
 				5B23B1181F4D1BE6000E18B4 /* Main.storyboard */,
 				5B23B11B1F4D1BE6000E18B4 /* Assets.xcassets */,
 				5B23B11D1F4D1BE6000E18B4 /* LaunchScreen.storyboard */,
 				D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */,
 				5B23B1201F4D1BE6000E18B4 /* Info.plist */,
-				5B731ED01F4E6660003D697C /* ListVacationCell.swift */,
-				5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */,
-				D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */,
-				D41821A21F4F6A9C00C1035B /* Constants.swift */,
 			);
 			path = Bizagi;
 			sourceTree = "<group>";
@@ -138,6 +140,58 @@
 				AF9DC7B21B4701570B0BA464 /* Pods-Bizagi.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D41821AA1F50814D00C1035B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D41821AC1F50817C00C1035B /* Firebase */,
+				D41821AB1F50815B00C1035B /* WS */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D41821AB1F50815B00C1035B /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				5B23B1141F4D1BE6000E18B4 /* FirstViewController.swift */,
+				5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */,
+				5B731ED01F4E6660003D697C /* ListVacationCell.swift */,
+			);
+			name = WS;
+			sourceTree = "<group>";
+		};
+		D41821AC1F50817C00C1035B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D41821A61F506C0E00C1035B /* DetalleSolicitudFireBase.swift */,
+				5B23B1161F4D1BE6000E18B4 /* SecondViewController.swift */,
+			);
+			name = Firebase;
+			sourceTree = "<group>";
+		};
+		D41821AD1F50819100C1035B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		D41821AE1F50819D00C1035B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D41821A81F507C4100C1035B /* Util.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		D41821AF1F5081AD00C1035B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D41821A21F4F6A9C00C1035B /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B23B1171F4D1BE6000E18B4 /* SecondViewController.swift in Sources */,
+				D41821A91F507C4100C1035B /* Util.swift in Sources */,
 				D4CFB7421F4F614300A6160C /* ListVacationsObject.swift in Sources */,
 				5B23B1131F4D1BE6000E18B4 /* AppDelegate.swift in Sources */,
 				5B731ED31F4E81A6003D697C /* DetalleSolicitud.swift in Sources */,
 				D41821A31F4F6A9C00C1035B /* Constants.swift in Sources */,
+				D41821A71F506C0E00C1035B /* DetalleSolicitudFireBase.swift in Sources */,
 				5B731ED11F4E6660003D697C /* ListVacationCell.swift in Sources */,
 				5B23B1151F4D1BE6000E18B4 /* FirstViewController.swift in Sources */,
 			);
