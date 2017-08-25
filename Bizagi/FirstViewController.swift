@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireObjectMapper
 
-class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+protocol isAbleToReceiveData {
+    func pass()  //data: string is an example parameter
+}
+
+class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, isAbleToReceiveData {
     
     
     @IBOutlet weak var _TableList: UITableView!
-    var listaPregunta = NSArray()
-    var idQuestion = String()
-    var pregunta = String()
-    
-    
     
     
     override func viewDidLoad()
@@ -26,6 +27,28 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         _TableList.delegate = self
         _TableList.dataSource = self
         
+        buscarLisatdo()
+        
+    }
+    
+    func buscarLisatdo(){
+        
+        progressBarDisplayer("Buscando", true)
+        
+        Alamofire.request(URL).responseArray { (response: DataResponse<[ListVacationsObject]>) in
+            
+            let listaVacaciones = response.result.value
+            
+            if let listaVacaciones = listaVacaciones {
+                
+                self.afterResponse()
+                
+                LISTADO_VACACIONES = listaVacaciones
+                
+                self._TableList.reloadData()
+                
+            }
+        }
     }
     
     override func didReceiveMemoryWarning()
@@ -42,7 +65,7 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 10
+        return LISTADO_VACACIONES.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -50,7 +73,23 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         //user search
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListVacationCell", for: indexPath) as! ListVacationCell
         
-       
+        
+        
+        cell._NombreSolicitante.text = LISTADO_VACACIONES[indexPath.row].employee!
+        cell._FechaDeA.text = "Desde " + LISTADO_VACACIONES[indexPath.row].beginDate! + " Hasta " + LISTADO_VACACIONES[indexPath.row].endDate!
+        cell._CantidadDias.text = LISTADO_VACACIONES[indexPath.row].endDate!
+        cell._CantidadDias.text = calcularDias(position: indexPath.row) + " Días"
+        
+        if LISTADO_VACACIONES[indexPath.row].approved == "aprobado" {
+            cell._ImgEstado.image = UIImage(named:"img-aprobado.png")!
+        }else if LISTADO_VACACIONES[indexPath.row].approved == "rechazado"{
+             cell._ImgEstado.image = UIImage(named:"img-rechazada.png")!
+            
+        }else{
+             cell._ImgEstado.image = UIImage(named:"img-pendiente.png")!
+            
+        }
+        
         return cell
     }
     
@@ -59,26 +98,48 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         return 0
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.destination is DetalleSolicitud{
-            let _ = (segue.destination as! DetalleSolicitud)
-        }
-    }
-    
-    var _StrLabel = UILabel()
-    var _MessageFrame = UIView()
-    var _ActivityIndicator = UIActivityIndicatorView()
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("por aca ando")
+        
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetalleSolicitud") as! DetalleSolicitud
         present(vc, animated: true, completion: nil)
         
+
+        
     }
+    
+    func pass() {
+         self._TableList.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.destination is DetalleSolicitud{
+            
+            let vc = (segue.destination as! DetalleSolicitud)
+            
+            vc.lastVacationOn = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].lastVacationOn!
+            vc.processId = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].processId!
+            vc.endDate = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].endDate!
+            vc.process = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].process!
+            vc.beginDate = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].beginDate!
+            vc.activityId = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].activityId!
+            vc.requestDate = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].requestDate!
+            vc.activity = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].activity!
+            vc.employee = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].employee!
+            vc.approved = LISTADO_VACACIONES[(_TableList.indexPathForSelectedRow?.row)!].approved!
+            vc.position = (_TableList.indexPathForSelectedRow?.row)!
+            vc.dias = calcularDias(position: (_TableList.indexPathForSelectedRow?.row)!) + " Días"
+            vc.delegate = self 
+        }
+    }
+    
+    
     // MARK: Custom functions
+    
+    
     func progressBarDisplayer(_ msg:String, _ indicator:Bool ) {
         
         _StrLabel = UILabel(frame: CGRect(x: 50, y: 0, width: 200, height: 50))
@@ -97,22 +158,33 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         view.addSubview(_MessageFrame)
     }
     
-    func afterResponse(_Genre: String)
+    func afterResponse()
     {
         
         _MessageFrame.removeFromSuperview()
         
-        let vc: DetalleSolicitud = DetalleSolicitud(nibName: "DetalleSolicitud", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-        /*
-         let cvc = AppsCVCCollectionViewController(nibName: "AppsCVCCollectionViewController", bundle: nil)
-         self.navigationController?.pushViewController(cvc, animated: true)*/
     }
     
+    func calcularDias(position: Int) -> String
+    {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        
+        let beginDate = dateFormatter.date(from: LISTADO_VACACIONES[position].beginDate!)
+        let endDate = dateFormatter.date(from: LISTADO_VACACIONES[position].endDate!)
+        
+        let calendar = NSCalendar.current
+        
+        let fecha_desde = calendar.startOfDay(for: beginDate!)
+        let fecha_hasta = calendar.startOfDay(for: endDate!)
+        
+        let dias = Set<Calendar.Component>([.day])
+        let result = calendar.dateComponents(dias, from: fecha_desde as   Date,  to: fecha_hasta as Date)
+      
+        return String(describing: result.day!)
+    }
 
-    
-
-    
     
 }
 

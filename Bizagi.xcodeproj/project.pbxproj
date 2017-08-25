@@ -1,1118 +1,528 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>06877A83E7974769DC856445</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3A9A7C01F3A67503A62C5B04</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BizagiTests/Pods-BizagiTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3BCCF4B161EFD221D6AF8EC7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4C2FD60FE9CC555D6549D1F7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B1061F4D1BE6000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B1111F4D1BE6000E18B4</string>
-				<string>5B23B1281F4D1BE7000E18B4</string>
-				<string>5B23B1101F4D1BE6000E18B4</string>
-				<string>AB37F66FC2D3D361655BE9A4</string>
-				<string>81EE6D15A3CD80BB88C25911</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1071F4D1BE6000E18B4</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0830</string>
-				<key>LastUpgradeCheck</key>
-				<string>0830</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Edilberto Amado Perdomo</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>5B23B10E1F4D1BE6000E18B4</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.3.3</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>5B23B1241F4D1BE7000E18B4</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.3.3</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>5B23B10E1F4D1BE6000E18B4</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>5B23B10A1F4D1BE6000E18B4</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5B23B1061F4D1BE6000E18B4</string>
-			<key>productRefGroup</key>
-			<string>5B23B1101F4D1BE6000E18B4</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5B23B10E1F4D1BE6000E18B4</string>
-				<string>5B23B1241F4D1BE7000E18B4</string>
-			</array>
-		</dict>
-		<key>5B23B10A1F4D1BE6000E18B4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5B23B12C1F4D1BE7000E18B4</string>
-				<string>5B23B12D1F4D1BE7000E18B4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5B23B10B1F4D1BE6000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5B23B1171F4D1BE6000E18B4</string>
-				<string>5B23B1131F4D1BE6000E18B4</string>
-				<string>5B731ED31F4E81A6003D697C</string>
-				<string>5B731ED11F4E6660003D697C</string>
-				<string>5B23B1151F4D1BE6000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B10C1F4D1BE6000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F6FF9CA3F767E83934E90F75</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B10D1F4D1BE6000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5B23B11F1F4D1BE6000E18B4</string>
-				<string>5B23B11C1F4D1BE6000E18B4</string>
-				<string>5B23B11A1F4D1BE6000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B10E1F4D1BE6000E18B4</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5B23B12E1F4D1BE7000E18B4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>06877A83E7974769DC856445</string>
-				<string>5B23B10B1F4D1BE6000E18B4</string>
-				<string>5B23B10C1F4D1BE6000E18B4</string>
-				<string>5B23B10D1F4D1BE6000E18B4</string>
-				<string>726FC07326208749C2378A02</string>
-				<string>3BCCF4B161EFD221D6AF8EC7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Bizagi</string>
-			<key>productName</key>
-			<string>Bizagi</string>
-			<key>productReference</key>
-			<string>5B23B10F1F4D1BE6000E18B4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>5B23B10F1F4D1BE6000E18B4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Bizagi.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5B23B1101F4D1BE6000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B10F1F4D1BE6000E18B4</string>
-				<string>5B23B1251F4D1BE7000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1111F4D1BE6000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B1121F4D1BE6000E18B4</string>
-				<string>5B23B1141F4D1BE6000E18B4</string>
-				<string>5B23B1161F4D1BE6000E18B4</string>
-				<string>5B23B1181F4D1BE6000E18B4</string>
-				<string>5B23B11B1F4D1BE6000E18B4</string>
-				<string>5B23B11D1F4D1BE6000E18B4</string>
-				<string>5B23B1201F4D1BE6000E18B4</string>
-				<string>5B731ED01F4E6660003D697C</string>
-				<string>5B731ED21F4E81A6003D697C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Bizagi</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1121F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1131F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B1121F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B1141F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>FirstViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1151F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B1141F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B1161F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SecondViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1171F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B1161F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B1181F4D1BE6000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B1191F4D1BE6000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1191F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B11A1F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B1181F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B11B1F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B11C1F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B11B1F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B11D1F4D1BE6000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B11E1F4D1BE6000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B11E1F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B11F1F4D1BE6000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B11D1F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B1201F4D1BE6000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1211F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5B23B12A1F4D1BE7000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B1221F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B1231F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5B23B1241F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5B23B1311F4D1BE7000E18B4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4C2FD60FE9CC555D6549D1F7</string>
-				<string>5B23B1211F4D1BE7000E18B4</string>
-				<string>5B23B1221F4D1BE7000E18B4</string>
-				<string>5B23B1231F4D1BE7000E18B4</string>
-				<string>B558ADC0F1D4BAF1373A9698</string>
-				<string>3A9A7C01F3A67503A62C5B04</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5B23B1271F4D1BE7000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BizagiTests</string>
-			<key>productName</key>
-			<string>BizagiTests</string>
-			<key>productReference</key>
-			<string>5B23B1251F4D1BE7000E18B4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>5B23B1251F4D1BE7000E18B4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BizagiTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5B23B1261F4D1BE7000E18B4</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5B23B1071F4D1BE6000E18B4</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5B23B10E1F4D1BE6000E18B4</string>
-			<key>remoteInfo</key>
-			<string>Bizagi</string>
-		</dict>
-		<key>5B23B1271F4D1BE7000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5B23B10E1F4D1BE6000E18B4</string>
-			<key>targetProxy</key>
-			<string>5B23B1261F4D1BE7000E18B4</string>
-		</dict>
-		<key>5B23B1281F4D1BE7000E18B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5B23B1291F4D1BE7000E18B4</string>
-				<string>5B23B12B1F4D1BE7000E18B4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BizagiTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B1291F4D1BE7000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>BizagiTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B12A1F4D1BE7000E18B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B23B1291F4D1BE7000E18B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B23B12B1F4D1BE7000E18B4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B23B12C1F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
-				<string>DEBUG</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5B23B12D1F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5B23B12E1F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5B23B12F1F4D1BE7000E18B4</string>
-				<string>5B23B1301F4D1BE7000E18B4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5B23B12F1F4D1BE7000E18B4</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A5FBC4B6162D9BFE566BB46A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Bizagi/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.eddy.Bizagi</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5B23B1301F4D1BE7000E18B4</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AF9DC7B21B4701570B0BA464</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Bizagi/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.eddy.Bizagi</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5B23B1311F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5B23B1321F4D1BE7000E18B4</string>
-				<string>5B23B1331F4D1BE7000E18B4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5B23B1321F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BizagiTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.eddy.BizagiTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Bizagi.app/Bizagi</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5B23B1331F4D1BE7000E18B4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BizagiTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.eddy.BizagiTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Bizagi.app/Bizagi</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5B731ED01F4E6660003D697C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ListVacationCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B731ED11F4E6660003D697C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B731ED01F4E6660003D697C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B731ED21F4E81A6003D697C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DetalleSolicitud.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B731ED31F4E81A6003D697C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B731ED21F4E81A6003D697C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>726FC07326208749C2378A02</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>81EE6D15A3CD80BB88C25911</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>976FCD2D97B6507BBBD2516A</string>
-				<string>9140A4A4D228053C62F6BB9D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9140A4A4D228053C62F6BB9D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_BizagiTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>976FCD2D97B6507BBBD2516A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Bizagi.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A5FBC4B6162D9BFE566BB46A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Bizagi.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AB37F66FC2D3D361655BE9A4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A5FBC4B6162D9BFE566BB46A</string>
-				<string>AF9DC7B21B4701570B0BA464</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AF9DC7B21B4701570B0BA464</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Bizagi.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B558ADC0F1D4BAF1373A9698</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BizagiTests/Pods-BizagiTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F6FF9CA3F767E83934E90F75</key>
-		<dict>
-			<key>fileRef</key>
-			<string>976FCD2D97B6507BBBD2516A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5B23B1071F4D1BE6000E18B4</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B23B1131F4D1BE6000E18B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B1121F4D1BE6000E18B4 /* AppDelegate.swift */; };
+		5B23B1151F4D1BE6000E18B4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B1141F4D1BE6000E18B4 /* FirstViewController.swift */; };
+		5B23B1171F4D1BE6000E18B4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B1161F4D1BE6000E18B4 /* SecondViewController.swift */; };
+		5B23B11A1F4D1BE6000E18B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B23B1181F4D1BE6000E18B4 /* Main.storyboard */; };
+		5B23B11C1F4D1BE6000E18B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B23B11B1F4D1BE6000E18B4 /* Assets.xcassets */; };
+		5B23B11F1F4D1BE6000E18B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B23B11D1F4D1BE6000E18B4 /* LaunchScreen.storyboard */; };
+		5B23B12A1F4D1BE7000E18B4 /* BizagiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B1291F4D1BE7000E18B4 /* BizagiTests.swift */; };
+		5B731ED11F4E6660003D697C /* ListVacationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B731ED01F4E6660003D697C /* ListVacationCell.swift */; };
+		5B731ED31F4E81A6003D697C /* DetalleSolicitud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */; };
+		D41821A31F4F6A9C00C1035B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41821A21F4F6A9C00C1035B /* Constants.swift */; };
+		D41821A51F4F81AF00C1035B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */; };
+		D4CFB7421F4F614300A6160C /* ListVacationsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */; };
+		F6FF9CA3F767E83934E90F75 /* Pods_Bizagi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976FCD2D97B6507BBBD2516A /* Pods_Bizagi.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B23B1261F4D1BE7000E18B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B23B1071F4D1BE6000E18B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B23B10E1F4D1BE6000E18B4;
+			remoteInfo = Bizagi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B23B10F1F4D1BE6000E18B4 /* Bizagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bizagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B23B1121F4D1BE6000E18B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B23B1141F4D1BE6000E18B4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		5B23B1161F4D1BE6000E18B4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5B23B1191F4D1BE6000E18B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B23B11B1F4D1BE6000E18B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B23B11E1F4D1BE6000E18B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B23B1201F4D1BE6000E18B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B23B1251F4D1BE7000E18B4 /* BizagiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BizagiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B23B1291F4D1BE7000E18B4 /* BizagiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizagiTests.swift; sourceTree = "<group>"; };
+		5B23B12B1F4D1BE7000E18B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B731ED01F4E6660003D697C /* ListVacationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVacationCell.swift; sourceTree = "<group>"; };
+		5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleSolicitud.swift; sourceTree = "<group>"; };
+		9140A4A4D228053C62F6BB9D /* Pods_BizagiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BizagiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		976FCD2D97B6507BBBD2516A /* Pods_Bizagi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bizagi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FBC4B6162D9BFE566BB46A /* Pods-Bizagi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizagi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi.debug.xcconfig"; sourceTree = "<group>"; };
+		AF9DC7B21B4701570B0BA464 /* Pods-Bizagi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizagi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi.release.xcconfig"; sourceTree = "<group>"; };
+		D41821A21F4F6A9C00C1035B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVacationsObject.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B23B10C1F4D1BE6000E18B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6FF9CA3F767E83934E90F75 /* Pods_Bizagi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B23B1221F4D1BE7000E18B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B23B1061F4D1BE6000E18B4 = {
+			isa = PBXGroup;
+			children = (
+				5B23B1111F4D1BE6000E18B4 /* Bizagi */,
+				5B23B1281F4D1BE7000E18B4 /* BizagiTests */,
+				5B23B1101F4D1BE6000E18B4 /* Products */,
+				AB37F66FC2D3D361655BE9A4 /* Pods */,
+				81EE6D15A3CD80BB88C25911 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B23B1101F4D1BE6000E18B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B23B10F1F4D1BE6000E18B4 /* Bizagi.app */,
+				5B23B1251F4D1BE7000E18B4 /* BizagiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B23B1111F4D1BE6000E18B4 /* Bizagi */ = {
+			isa = PBXGroup;
+			children = (
+				5B23B1121F4D1BE6000E18B4 /* AppDelegate.swift */,
+				5B23B1141F4D1BE6000E18B4 /* FirstViewController.swift */,
+				5B23B1161F4D1BE6000E18B4 /* SecondViewController.swift */,
+				5B23B1181F4D1BE6000E18B4 /* Main.storyboard */,
+				5B23B11B1F4D1BE6000E18B4 /* Assets.xcassets */,
+				5B23B11D1F4D1BE6000E18B4 /* LaunchScreen.storyboard */,
+				D41821A41F4F81AF00C1035B /* GoogleService-Info.plist */,
+				5B23B1201F4D1BE6000E18B4 /* Info.plist */,
+				5B731ED01F4E6660003D697C /* ListVacationCell.swift */,
+				5B731ED21F4E81A6003D697C /* DetalleSolicitud.swift */,
+				D4CFB7411F4F614300A6160C /* ListVacationsObject.swift */,
+				D41821A21F4F6A9C00C1035B /* Constants.swift */,
+			);
+			path = Bizagi;
+			sourceTree = "<group>";
+		};
+		5B23B1281F4D1BE7000E18B4 /* BizagiTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B23B1291F4D1BE7000E18B4 /* BizagiTests.swift */,
+				5B23B12B1F4D1BE7000E18B4 /* Info.plist */,
+			);
+			path = BizagiTests;
+			sourceTree = "<group>";
+		};
+		81EE6D15A3CD80BB88C25911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				976FCD2D97B6507BBBD2516A /* Pods_Bizagi.framework */,
+				9140A4A4D228053C62F6BB9D /* Pods_BizagiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB37F66FC2D3D361655BE9A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5FBC4B6162D9BFE566BB46A /* Pods-Bizagi.debug.xcconfig */,
+				AF9DC7B21B4701570B0BA464 /* Pods-Bizagi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B23B10E1F4D1BE6000E18B4 /* Bizagi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B23B12E1F4D1BE7000E18B4 /* Build configuration list for PBXNativeTarget "Bizagi" */;
+			buildPhases = (
+				06877A83E7974769DC856445 /* [CP] Check Pods Manifest.lock */,
+				5B23B10B1F4D1BE6000E18B4 /* Sources */,
+				5B23B10C1F4D1BE6000E18B4 /* Frameworks */,
+				5B23B10D1F4D1BE6000E18B4 /* Resources */,
+				726FC07326208749C2378A02 /* [CP] Embed Pods Frameworks */,
+				3BCCF4B161EFD221D6AF8EC7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bizagi;
+			productName = Bizagi;
+			productReference = 5B23B10F1F4D1BE6000E18B4 /* Bizagi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B23B1241F4D1BE7000E18B4 /* BizagiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B23B1311F4D1BE7000E18B4 /* Build configuration list for PBXNativeTarget "BizagiTests" */;
+			buildPhases = (
+				5B23B1211F4D1BE7000E18B4 /* Sources */,
+				5B23B1221F4D1BE7000E18B4 /* Frameworks */,
+				5B23B1231F4D1BE7000E18B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B23B1271F4D1BE7000E18B4 /* PBXTargetDependency */,
+			);
+			name = BizagiTests;
+			productName = BizagiTests;
+			productReference = 5B23B1251F4D1BE7000E18B4 /* BizagiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B23B1071F4D1BE6000E18B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Edilberto Amado Perdomo";
+				TargetAttributes = {
+					5B23B10E1F4D1BE6000E18B4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					5B23B1241F4D1BE7000E18B4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B23B10E1F4D1BE6000E18B4;
+					};
+				};
+			};
+			buildConfigurationList = 5B23B10A1F4D1BE6000E18B4 /* Build configuration list for PBXProject "Bizagi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B23B1061F4D1BE6000E18B4;
+			productRefGroup = 5B23B1101F4D1BE6000E18B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B23B10E1F4D1BE6000E18B4 /* Bizagi */,
+				5B23B1241F4D1BE7000E18B4 /* BizagiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B23B10D1F4D1BE6000E18B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B23B11F1F4D1BE6000E18B4 /* LaunchScreen.storyboard in Resources */,
+				D41821A51F4F81AF00C1035B /* GoogleService-Info.plist in Resources */,
+				5B23B11C1F4D1BE6000E18B4 /* Assets.xcassets in Resources */,
+				5B23B11A1F4D1BE6000E18B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B23B1231F4D1BE7000E18B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06877A83E7974769DC856445 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3BCCF4B161EFD221D6AF8EC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		726FC07326208749C2378A02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bizagi/Pods-Bizagi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B23B10B1F4D1BE6000E18B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B23B1171F4D1BE6000E18B4 /* SecondViewController.swift in Sources */,
+				D4CFB7421F4F614300A6160C /* ListVacationsObject.swift in Sources */,
+				5B23B1131F4D1BE6000E18B4 /* AppDelegate.swift in Sources */,
+				5B731ED31F4E81A6003D697C /* DetalleSolicitud.swift in Sources */,
+				D41821A31F4F6A9C00C1035B /* Constants.swift in Sources */,
+				5B731ED11F4E6660003D697C /* ListVacationCell.swift in Sources */,
+				5B23B1151F4D1BE6000E18B4 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B23B1211F4D1BE7000E18B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B23B12A1F4D1BE7000E18B4 /* BizagiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B23B1271F4D1BE7000E18B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B23B10E1F4D1BE6000E18B4 /* Bizagi */;
+			targetProxy = 5B23B1261F4D1BE7000E18B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B23B1181F4D1BE6000E18B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B23B1191F4D1BE6000E18B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B23B11D1F4D1BE6000E18B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B23B11E1F4D1BE6000E18B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B23B12C1F4D1BE7000E18B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B23B12D1F4D1BE7000E18B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B23B12F1F4D1BE7000E18B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5FBC4B6162D9BFE566BB46A /* Pods-Bizagi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bizagi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddy.Bizagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5B23B1301F4D1BE7000E18B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF9DC7B21B4701570B0BA464 /* Pods-Bizagi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bizagi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddy.Bizagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5B23B1321F4D1BE7000E18B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BizagiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddy.BizagiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bizagi.app/Bizagi";
+			};
+			name = Debug;
+		};
+		5B23B1331F4D1BE7000E18B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BizagiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddy.BizagiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bizagi.app/Bizagi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B23B10A1F4D1BE6000E18B4 /* Build configuration list for PBXProject "Bizagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B23B12C1F4D1BE7000E18B4 /* Debug */,
+				5B23B12D1F4D1BE7000E18B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B23B12E1F4D1BE7000E18B4 /* Build configuration list for PBXNativeTarget "Bizagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B23B12F1F4D1BE7000E18B4 /* Debug */,
+				5B23B1301F4D1BE7000E18B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B23B1311F4D1BE7000E18B4 /* Build configuration list for PBXNativeTarget "BizagiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B23B1321F4D1BE7000E18B4 /* Debug */,
+				5B23B1331F4D1BE7000E18B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B23B1071F4D1BE6000E18B4 /* Project object */;
+}
